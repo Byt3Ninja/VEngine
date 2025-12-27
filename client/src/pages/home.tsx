@@ -72,8 +72,8 @@ export default function Home() {
           </div>
 
           <div className="hidden md:block">
-            <Button variant="default" className="rounded-full px-6 font-semibold bg-foreground text-background hover:bg-foreground/90 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
-              Contact Us
+            <Button variant="default" className="rounded-full px-6 font-semibold bg-foreground text-background hover:bg-foreground/90 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5" asChild>
+              <a href="mailto:hello@vengine.io">Contact Us</a>
             </Button>
           </div>
 
@@ -92,7 +92,9 @@ export default function Home() {
             <a href="#ecosystem" onClick={() => setIsMobileMenuOpen(false)} className="text-3xl font-display font-bold hover:text-primary transition-colors">Ecosystem</a>
             <a href="#products" onClick={() => setIsMobileMenuOpen(false)} className="text-3xl font-display font-bold hover:text-primary transition-colors">Products</a>
             <a href="#process" onClick={() => setIsMobileMenuOpen(false)} className="text-3xl font-display font-bold hover:text-primary transition-colors">Process</a>
-            <Button size="lg" className="w-full max-w-xs rounded-full text-lg mt-8">Contact Us</Button>
+            <Button size="lg" className="w-full max-w-xs rounded-full text-lg mt-8" asChild>
+              <a href="mailto:hello@vengine.io">Contact Us</a>
+            </Button>
           </div>
         )}
       </nav>
@@ -134,11 +136,11 @@ export default function Home() {
             </motion.p>
             
             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4 sm:px-0">
-              <Button size="lg" className="w-full sm:w-auto rounded-full px-10 text-lg h-14 md:h-16 bg-primary text-primary-foreground hover:bg-primary/90 shadow-xl shadow-primary/25 hover:scale-105 transition-all duration-300">
-                Explore Ecosystem
+              <Button size="lg" className="w-full sm:w-auto rounded-full px-10 text-lg h-14 md:h-16 bg-primary text-primary-foreground hover:bg-primary/90 shadow-xl shadow-primary/25 hover:scale-105 transition-all duration-300" asChild>
+                <a href="#ecosystem">Explore Ecosystem</a>
               </Button>
-              <Button variant="outline" size="lg" className="w-full sm:w-auto rounded-full px-10 text-lg h-14 md:h-16 backdrop-blur-md bg-background/30 border-primary/20 hover:bg-primary/10 hover:border-primary/50 transition-all duration-300">
-                Partner With Us
+              <Button variant="outline" size="lg" className="w-full sm:w-auto rounded-full px-10 text-lg h-14 md:h-16 backdrop-blur-md bg-background/30 border-primary/20 hover:bg-primary/10 hover:border-primary/50 transition-all duration-300" asChild>
+                <a href="mailto:partners@vengine.io">Partner With Us</a>
               </Button>
             </motion.div>
           </motion.div>
@@ -373,11 +375,11 @@ export default function Home() {
             We partner with visionary founders and enterprises to create the next generation of technology companies.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center px-4 sm:px-0">
-            <Button size="lg" className="w-full sm:w-auto rounded-full px-12 h-14 md:h-16 text-lg bg-white text-primary hover:bg-white/90 font-bold shadow-2xl">
-              Pitch Your Idea
+            <Button size="lg" className="w-full sm:w-auto rounded-full px-12 h-14 md:h-16 text-lg bg-white text-primary hover:bg-white/90 font-bold shadow-2xl" asChild>
+              <a href="mailto:pitch@vengine.io">Pitch Your Idea</a>
             </Button>
-            <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full px-12 h-14 md:h-16 text-lg border-white/30 text-white hover:bg-white/10 backdrop-blur-sm">
-              Contact Team
+            <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full px-12 h-14 md:h-16 text-lg border-white/30 text-white hover:bg-white/10 backdrop-blur-sm" asChild>
+              <a href="mailto:hello@vengine.io">Contact Team</a>
             </Button>
           </div>
         </div>
@@ -402,10 +404,10 @@ export default function Home() {
             <div>
               <h4 className="font-bold mb-6">Company</h4>
               <ul className="space-y-4 text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-primary transition-colors">About Us</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Portfolio</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Careers</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Contact</a></li>
+                <li><a href="#about" className="hover:text-primary transition-colors">About Us</a></li>
+                <li><a href="#products" className="hover:text-primary transition-colors">Portfolio</a></li>
+                <li><a href="mailto:careers@vengine.io" className="hover:text-primary transition-colors">Careers</a></li>
+                <li><a href="mailto:hello@vengine.io" className="hover:text-primary transition-colors">Contact</a></li>
               </ul>
             </div>
             
