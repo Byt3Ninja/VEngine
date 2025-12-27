@@ -145,17 +145,17 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row gap-16 mb-20">
             <div className="md:w-1/3">
-              <h2 className="font-display text-4xl font-bold mb-6">Where we focus</h2>
+              <h2 className="font-display text-4xl font-bold mb-6">Our Expertise</h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                We operate at the intersection of biology, technology, and patient care. Our companies are built to solve systemic problems in healthcare.
+                We provide full-stack next generation services to transform your business. From strategic consultation to robust software delivery.
               </p>
             </div>
             <div className="md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
-                { icon: Globe, title: "Digital Health", desc: "Platforms that expand access and improve care delivery outcomes." },
-                { icon: Cpu, title: "MedTech & AI", desc: "Hardware and algorithms that enable earlier diagnosis and treatment." },
-                { icon: Activity, title: "Therapeutics", desc: "Novel approaches to treating chronic conditions and rare diseases." },
-                { icon: Users, title: "Care Models", desc: "Redesigning how care is delivered to specialized populations." }
+                { icon: Globe, title: "IT Consultation", desc: "Expert assessment of your IT infrastructure with strategic recommendations to optimize technology investments." },
+                { icon: Cpu, title: "Product Development", desc: "Custom software solutions delivered by skilled developers who work closely to understand your requirements." },
+                { icon: Activity, title: "Cloud & Data Analytics", desc: "Leveraging technology to drive innovation, from system integration to IoT solutions." },
+                { icon: Users, title: "Cyber Security", desc: "Comprehensive security services including vulnerability assessments and threat intelligence." }
               ].map((area, i) => (
                 <Card key={i} className="border-border/50 bg-card hover:bg-secondary/50 transition-colors duration-300">
                   <CardContent className="p-8">
@@ -179,39 +179,40 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="flex justify-between items-end mb-16">
             <div>
-              <h2 className="font-display text-4xl font-bold mb-4">Our Companies</h2>
-              <p className="text-muted-foreground text-lg">Breaking new ground in healthcare innovation.</p>
+              <h2 className="font-display text-4xl font-bold mb-4">Our Products</h2>
+              <p className="text-muted-foreground text-lg">Next generation software products building the future.</p>
             </div>
             <Button variant="ghost" className="hidden md:flex group">
-              View all investments <ChevronRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+              View all products <ChevronRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { name: "NeuroFlow", category: "Mental Health", color: "bg-blue-500" },
-              { name: "VitalSense", category: "Remote Monitoring", color: "bg-emerald-500" },
-              { name: "GenePath", category: "Genomics", color: "bg-purple-500" }
+              { name: "TRSANA", category: "Process Management", color: "bg-blue-500", link: "https://trsana.net/" },
+              { name: "SignLayer", category: "Digital Signature", color: "bg-emerald-500", link: "https://signlayer.net/" },
+              { name: "TrustPass", category: "Security", color: "bg-purple-500", link: "#" },
+              { name: "SaaHub", category: "Communication", color: "bg-indigo-500", link: "#" }
             ].map((company, i) => (
-              <div key={i} className="group relative overflow-hidden rounded-2xl aspect-[4/5] cursor-pointer">
+              <a href={company.link} key={i} className="group relative overflow-hidden rounded-2xl aspect-[4/5] cursor-pointer block">
                 <div className={`absolute inset-0 ${company.color} mix-blend-multiply opacity-80 transition-opacity duration-500 group-hover:opacity-90`} />
                 <img 
-                  src={`https://images.unsplash.com/photo-${1570000000000 + i}?auto=format&fit=crop&w=800&q=80`} 
+                  src={`https://images.unsplash.com/photo-${1550000000000 + i * 1000}?auto=format&fit=crop&w=800&q=80`} 
                   alt={company.name} 
                   className="absolute inset-0 w-full h-full object-cover mix-blend-overlay grayscale group-hover:grayscale-0 transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
                 
-                <div className="absolute bottom-0 left-0 p-8 w-full transform transition-transform duration-500 group-hover:-translate-y-2">
-                  <div className="text-white/80 text-sm font-medium uppercase tracking-wider mb-2">{company.category}</div>
-                  <h3 className="text-white font-display text-3xl font-bold mb-4">{company.name}</h3>
+                <div className="absolute bottom-0 left-0 p-6 w-full transform transition-transform duration-500 group-hover:-translate-y-2">
+                  <div className="text-white/80 text-xs font-medium uppercase tracking-wider mb-2">{company.category}</div>
+                  <h3 className="text-white font-display text-2xl font-bold mb-2">{company.name}</h3>
                   <div className="h-0 group-hover:h-auto overflow-hidden transition-all">
-                    <span className="text-white/90 text-sm inline-flex items-center">
-                      Read Case Study <ArrowRight className="ml-2 w-4 h-4" />
+                    <span className="text-white/90 text-xs inline-flex items-center">
+                      Visit Website <ArrowRight className="ml-2 w-3 h-3" />
                     </span>
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
