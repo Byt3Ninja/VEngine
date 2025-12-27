@@ -11,6 +11,8 @@ import tawqe3yImg from "@assets/generated_images/tawqe3y_saas_platform_ui.png";
 import instadrImg from "@assets/generated_images/instadr_telemedicine_app_ui.png";
 import instamsgImg from "@assets/generated_images/instamsg_messaging_app_ui.png";
 import aifabricaImg from "@assets/generated_images/aifabrica_ai_tools_ui.png";
+import saaserpImg from "@assets/generated_images/saaserp_erp_dashboard_ui.png";
+import sawaImg from "@assets/generated_images/sawa_secure_chat_ui.png";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -228,6 +230,8 @@ export default function Home() {
               { name: "Instadr.app", category: "Health Tech", color: "bg-cyan-600", link: "https://instadr.app", image: instadrImg },
               { name: "Instamsg.app", category: "Communication", color: "bg-indigo-600", link: "https://instamsg.app", image: instamsgImg },
               { name: "Aifabrica.app", category: "AI Tools", color: "bg-purple-600", link: "https://aifabrica.app", image: aifabricaImg },
+              { name: "Saaserp.net", category: "Startup ERP", color: "bg-blue-500", link: "https://saaserp.net", image: saaserpImg },
+              { name: "Sawa.chat", category: "Secure Chat", color: "bg-emerald-500", link: "https://sawa.chat", image: sawaImg },
             ].map((product, i) => (
               <a href={product.link} key={i} className="group relative overflow-hidden rounded-2xl aspect-[4/5] cursor-pointer block">
                 <div className={`absolute inset-0 ${product.color} mix-blend-multiply opacity-80 transition-opacity duration-500 group-hover:opacity-90`} />
