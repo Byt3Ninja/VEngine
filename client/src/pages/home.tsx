@@ -4,6 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useState, useEffect } from "react";
 import heroBg from "@assets/generated_images/abstract_health_tech_network_visualization.png";
+import virtualIncubatorImg from "@assets/generated_images/virtual_incubator_dashboard_ui.png";
+import signLayerImg from "@assets/generated_images/signlayer_digital_signature_ui.png";
+import wq3Img from "@assets/generated_images/wq3_real_estate_platform_ui.png";
+import tawqe3yImg from "@assets/generated_images/tawqe3y_saas_platform_ui.png";
+import instadrImg from "@assets/generated_images/instadr_telemedicine_app_ui.png";
+import instamsgImg from "@assets/generated_images/instamsg_messaging_app_ui.png";
+import aifabricaImg from "@assets/generated_images/aifabrica_ai_tools_ui.png";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -214,20 +221,20 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { name: "Virtual Incubator", category: "Startup Tech", color: "bg-blue-600", link: "#" },
-              { name: "SIGNLayer.net", category: "Digital Signature", color: "bg-emerald-600", link: "https://signlayer.net/" },
-              { name: "Wq3.ae", category: "Real Estate", color: "bg-amber-600", link: "#" },
-              { name: "Tawqe3y.com", category: "Platform", color: "bg-orange-600", link: "https://tawqe3y.com" },
-              { name: "Instadr.app", category: "Health Tech", color: "bg-cyan-600", link: "https://instadr.app" },
-              { name: "Instamsg.app", category: "Communication", color: "bg-indigo-600", link: "https://instamsg.app" },
-              { name: "Aifabrica.app", category: "AI Tools", color: "bg-purple-600", link: "https://aifabrica.app" },
+              { name: "Virtual Incubator", category: "Startup Tech", color: "bg-blue-600", link: "#", image: virtualIncubatorImg },
+              { name: "SIGNLayer.net", category: "Digital Signature", color: "bg-emerald-600", link: "https://signlayer.net/", image: signLayerImg },
+              { name: "Wq3.ae", category: "Real Estate", color: "bg-amber-600", link: "#", image: wq3Img },
+              { name: "Tawqe3y.com", category: "Platform", color: "bg-orange-600", link: "https://tawqe3y.com", image: tawqe3yImg },
+              { name: "Instadr.app", category: "Health Tech", color: "bg-cyan-600", link: "https://instadr.app", image: instadrImg },
+              { name: "Instamsg.app", category: "Communication", color: "bg-indigo-600", link: "https://instamsg.app", image: instamsgImg },
+              { name: "Aifabrica.app", category: "AI Tools", color: "bg-purple-600", link: "https://aifabrica.app", image: aifabricaImg },
             ].map((product, i) => (
               <a href={product.link} key={i} className="group relative overflow-hidden rounded-2xl aspect-[4/5] cursor-pointer block">
                 <div className={`absolute inset-0 ${product.color} mix-blend-multiply opacity-80 transition-opacity duration-500 group-hover:opacity-90`} />
                 <img 
-                  src={`https://images.unsplash.com/photo-${1550000000000 + i * 1111}?auto=format&fit=crop&w=800&q=80`} 
+                  src={product.image}
                   alt={product.name} 
-                  className="absolute inset-0 w-full h-full object-cover mix-blend-overlay grayscale group-hover:grayscale-0 transition-all duration-700"
+                  className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-90 group-hover:opacity-100 transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
                 
