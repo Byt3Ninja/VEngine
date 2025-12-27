@@ -169,29 +169,24 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(300px,auto)]">
-            {/* Main Feature - Healiot */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-fr">
+            {/* Healiot */}
             <motion.div 
               whileHover={{ y: -5 }}
-              className="md:col-span-2 row-span-2 relative overflow-hidden rounded-3xl bg-background border border-border/50 shadow-sm group min-h-[400px]"
+              className="relative overflow-hidden rounded-3xl bg-background border border-border/50 shadow-sm group"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-transparent transition-opacity group-hover:from-teal-500/10" />
-              <div className="p-8 md:p-10 h-full flex flex-col justify-between relative z-10">
-                <div>
-                  <div className="w-16 h-16 rounded-2xl bg-teal-500/10 flex items-center justify-center text-teal-600 mb-6">
-                    <Cpu className="w-8 h-8" />
-                  </div>
-                  <h3 className="font-display text-3xl md:text-4xl font-bold mb-4">Healiot</h3>
-                  <p className="text-lg md:text-xl text-muted-foreground max-w-md">
-                    Our Information Technology powerhouse. Building robust, scalable infrastructure for the digital age.
-                  </p>
+              <div className="p-8 h-full flex flex-col">
+                <div className="w-14 h-14 rounded-2xl bg-teal-500/10 flex items-center justify-center text-teal-600 mb-6">
+                  <Cpu className="w-7 h-7" />
                 </div>
-                <div className="flex flex-wrap gap-3 md:gap-4 mt-8">
-                   <div className="px-4 py-2 rounded-full bg-secondary/50 text-sm font-medium">Cloud Architecture</div>
-                   <div className="px-4 py-2 rounded-full bg-secondary/50 text-sm font-medium">Cyber Security</div>
+                <h3 className="font-display text-2xl font-bold mb-2">Healiot</h3>
+                <p className="text-muted-foreground">
+                  Our Information Technology powerhouse. Building robust, scalable infrastructure.
+                </p>
+                <div className="mt-auto pt-8 flex justify-end">
+                   <ArrowUpRight className="text-teal-500 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
               </div>
-              <div className="absolute -right-20 -bottom-20 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl group-hover:bg-teal-500/20 transition-all duration-700" />
             </motion.div>
 
             {/* Growthlabs */}
