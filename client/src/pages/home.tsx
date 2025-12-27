@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Activity, Globe, Cpu, Users, ChevronRight, Menu, X } from "lucide-react";
+import { ArrowRight, Activity, Globe, Cpu, Users, ChevronRight, Menu, X, Rocket, Zap, Laptop } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useState, useEffect } from "react";
@@ -42,16 +42,16 @@ export default function Home() {
         <div className="container mx-auto px-6 flex items-center justify-between">
           <div className="flex items-center gap-2 font-display font-bold text-2xl tracking-tighter">
             <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground">
-              <Activity className="w-5 h-5" />
+              <Zap className="w-5 h-5" />
             </div>
-            <span>healiot<span className="text-primary">.</span></span>
+            <span>vengine<span className="text-primary">.io</span></span>
           </div>
 
           <div className="hidden md:flex items-center gap-8 text-sm font-medium">
             <a href="#about" className="hover:text-primary transition-colors">About</a>
-            <a href="#portfolio" className="hover:text-primary transition-colors">Portfolio</a>
+            <a href="#ecosystem" className="hover:text-primary transition-colors">Ecosystem</a>
+            <a href="#products" className="hover:text-primary transition-colors">Products</a>
             <a href="#process" className="hover:text-primary transition-colors">Process</a>
-            <a href="#team" className="hover:text-primary transition-colors">Team</a>
             <Button variant="default" size="sm" className="rounded-full px-6">
               Contact Us
             </Button>
@@ -69,9 +69,9 @@ export default function Home() {
         {isMobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 w-full bg-background border-b border-border p-6 flex flex-col gap-4 shadow-lg animate-in slide-in-from-top-5">
             <a href="#about" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium">About</a>
-            <a href="#portfolio" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium">Portfolio</a>
+            <a href="#ecosystem" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium">Ecosystem</a>
+            <a href="#products" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium">Products</a>
             <a href="#process" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium">Process</a>
-            <a href="#team" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium">Team</a>
             <Button className="w-full">Contact Us</Button>
           </div>
         )}
@@ -84,7 +84,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/50 to-background z-10" />
           <img 
             src={heroBg} 
-            alt="Abstract Health Tech Network" 
+            alt="Abstract Network Visualization" 
             className="w-full h-full object-cover opacity-40"
           />
         </div>
@@ -98,49 +98,74 @@ export default function Home() {
           >
             <motion.div variants={fadeIn} className="mb-6 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider border border-primary/20">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              Building the Future of Care
+              The Venture Engine
             </motion.div>
             
             <motion.h1 variants={fadeIn} className="font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1] mb-8 text-foreground">
-              We build <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">breakthrough</span> health companies.
+              Building the <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">future</span> ecosystem.
             </motion.h1>
             
             <motion.p variants={fadeIn} className="text-xl md:text-2xl text-muted-foreground max-w-2xl mb-10 leading-relaxed">
-              Healiot is a venture studio dedicated to transforming healthcare. We identify gaps, validate solutions, and build scalable companies that improve lives.
+              Venture Engine (Vengine.io) is a powerhouse for innovation. We combine intelligent software, strategic marketing, and technology expertise to build scalable companies.
             </motion.p>
             
             <motion.div variants={fadeIn} className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="rounded-full px-8 text-lg h-14 bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/25">
-                Our Portfolio <ArrowRight className="ml-2 w-5 h-5" />
+                Our Ecosystem <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               <Button variant="outline" size="lg" className="rounded-full px-8 text-lg h-14 backdrop-blur-sm bg-background/50 border-primary/20 hover:bg-primary/5">
-                How We Work
+                Start Building
               </Button>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 border-y border-border/50 bg-secondary/30">
+      {/* Joint Ventures / Ecosystem Section */}
+      <section id="ecosystem" className="py-20 border-y border-border/50 bg-secondary/30">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
+          <div className="text-center mb-16">
+            <h2 className="font-display text-3xl font-bold mb-4">Our Ecosystem</h2>
+            <p className="text-muted-foreground">The pillars that power our venture engine</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { number: "$120M+", label: "Capital Raised" },
-              { number: "15+", label: "Companies Built" },
-              { number: "2M+", label: "Lives Impacted" },
-              { number: "4", label: "Exits" }
-            ].map((stat, i) => (
-              <div key={i} className="text-center md:text-left">
-                <div className="font-display text-4xl md:text-5xl font-bold text-foreground mb-2">{stat.number}</div>
-                <div className="text-muted-foreground font-medium uppercase tracking-wide text-sm">{stat.label}</div>
-              </div>
+              { 
+                name: "Growthlabs", 
+                desc: "Ecosystem enabler through intelligent software", 
+                icon: Rocket,
+                color: "text-blue-500"
+              },
+              { 
+                name: "Healiot", 
+                desc: "Information Technology Company", 
+                icon: Cpu,
+                color: "text-teal-500"
+              },
+              { 
+                name: "Bluecake", 
+                desc: "Phygital Marketing Agency", 
+                icon: Laptop,
+                color: "text-purple-500"
+              }
+            ].map((venture, i) => (
+              <Card key={i} className="border-border/50 bg-background hover:border-primary/50 transition-all duration-300 group">
+                <CardContent className="p-8 text-center">
+                  <div className={`w-16 h-16 mx-auto rounded-2xl bg-secondary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform ${venture.color}`}>
+                    <venture.icon className="w-8 h-8" />
+                  </div>
+                  <h3 className="font-display text-2xl font-bold mb-3">{venture.name}</h3>
+                  <p className="text-muted-foreground font-medium">
+                    {venture.desc}
+                  </p>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Focus Areas */}
+      {/* Expertise Areas */}
       <section id="about" className="py-32 bg-background">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row gap-16 mb-20">
@@ -174,8 +199,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Portfolio Section */}
-      <section id="portfolio" className="py-32 bg-secondary/20">
+      {/* Products Section */}
+      <section id="products" className="py-32 bg-secondary/20">
         <div className="container mx-auto px-6">
           <div className="flex justify-between items-end mb-16">
             <div>
@@ -189,23 +214,26 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { name: "TRSANA", category: "Process Management", color: "bg-blue-500", link: "https://trsana.net/" },
-              { name: "SignLayer", category: "Digital Signature", color: "bg-emerald-500", link: "https://signlayer.net/" },
-              { name: "TrustPass", category: "Security", color: "bg-purple-500", link: "#" },
-              { name: "SaaHub", category: "Communication", color: "bg-indigo-500", link: "#" }
-            ].map((company, i) => (
-              <a href={company.link} key={i} className="group relative overflow-hidden rounded-2xl aspect-[4/5] cursor-pointer block">
-                <div className={`absolute inset-0 ${company.color} mix-blend-multiply opacity-80 transition-opacity duration-500 group-hover:opacity-90`} />
+              { name: "Virtual Incubator", category: "Startup Tech", color: "bg-blue-600", link: "#" },
+              { name: "SIGNLayer.net", category: "Digital Signature", color: "bg-emerald-600", link: "https://signlayer.net/" },
+              { name: "Wq3.ae", category: "Real Estate", color: "bg-amber-600", link: "#" },
+              { name: "Wq3ly.com", category: "Platform", color: "bg-orange-600", link: "https://wq3ly.com" },
+              { name: "Instadr.app", category: "Health Tech", color: "bg-cyan-600", link: "https://instadr.app" },
+              { name: "Instamsg.app", category: "Communication", color: "bg-indigo-600", link: "https://instamsg.app" },
+              { name: "Aifabrica.app", category: "AI Tools", color: "bg-purple-600", link: "https://aifabrica.app" },
+            ].map((product, i) => (
+              <a href={product.link} key={i} className="group relative overflow-hidden rounded-2xl aspect-[4/5] cursor-pointer block">
+                <div className={`absolute inset-0 ${product.color} mix-blend-multiply opacity-80 transition-opacity duration-500 group-hover:opacity-90`} />
                 <img 
-                  src={`https://images.unsplash.com/photo-${1550000000000 + i * 1000}?auto=format&fit=crop&w=800&q=80`} 
-                  alt={company.name} 
+                  src={`https://images.unsplash.com/photo-${1550000000000 + i * 1111}?auto=format&fit=crop&w=800&q=80`} 
+                  alt={product.name} 
                   className="absolute inset-0 w-full h-full object-cover mix-blend-overlay grayscale group-hover:grayscale-0 transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
                 
                 <div className="absolute bottom-0 left-0 p-6 w-full transform transition-transform duration-500 group-hover:-translate-y-2">
-                  <div className="text-white/80 text-xs font-medium uppercase tracking-wider mb-2">{company.category}</div>
-                  <h3 className="text-white font-display text-2xl font-bold mb-2">{company.name}</h3>
+                  <div className="text-white/80 text-xs font-medium uppercase tracking-wider mb-2">{product.category}</div>
+                  <h3 className="text-white font-display text-2xl font-bold mb-2">{product.name}</h3>
                   <div className="h-0 group-hover:h-auto overflow-hidden transition-all">
                     <span className="text-white/90 text-xs inline-flex items-center">
                       Visit Website <ArrowRight className="ml-2 w-3 h-3" />
@@ -214,6 +242,17 @@ export default function Home() {
                 </div>
               </a>
             ))}
+             {/* Filler card to keep grid balanced or encourage contact */}
+             <div className="group relative overflow-hidden rounded-2xl aspect-[4/5] flex items-center justify-center bg-card border border-dashed border-border hover:border-primary/50 transition-colors cursor-pointer">
+                <div className="text-center p-6">
+                  <div className="w-12 h-12 rounded-full bg-secondary mx-auto mb-4 flex items-center justify-center">
+                    <Rocket className="w-6 h-6 text-muted-foreground" />
+                  </div>
+                  <h3 className="font-display text-xl font-bold mb-2">Build With Us</h3>
+                  <p className="text-sm text-muted-foreground mb-4">Have an idea?</p>
+                  <Button variant="outline" size="sm">Contact Us</Button>
+                </div>
+             </div>
           </div>
         </div>
       </section>
@@ -233,7 +272,7 @@ export default function Home() {
             
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               {[
-                { step: "01", title: "Ideation", desc: "Identifying unmet needs in clinical workflows." },
+                { step: "01", title: "Ideation", desc: "Identifying unmet needs in market workflows." },
                 { step: "02", title: "Validation", desc: "Rigorous testing of market and technical feasibility." },
                 { step: "03", title: "Build", desc: "Assembling world-class teams and MVPs." },
                 { step: "04", title: "Scale", desc: "Growth, commercialization, and exit strategy." }
@@ -277,12 +316,12 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-2 font-display font-bold text-xl">
               <div className="w-6 h-6 rounded bg-primary flex items-center justify-center text-primary-foreground text-xs">
-                <Activity className="w-3 h-3" />
+                <Zap className="w-3 h-3" />
               </div>
-              <span>healiot<span className="text-primary">.</span></span>
+              <span>vengine<span className="text-primary">.io</span></span>
             </div>
             <div className="text-sm text-muted-foreground">
-              © 2024 Healiot Venture Studio. All rights reserved.
+              © 2024 Venture Engine. All rights reserved.
             </div>
             <div className="flex gap-6">
               <a href="#" className="text-muted-foreground hover:text-foreground transition-colors"><Globe className="w-5 h-5" /></a>
