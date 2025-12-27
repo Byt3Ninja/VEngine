@@ -124,20 +124,20 @@ export default function Home() {
               The Venture Engine
             </motion.div>
             
-            <motion.h1 variants={fadeInUp} className="font-display text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight leading-[0.95] mb-8 text-foreground">
+            <motion.h1 variants={fadeInUp} className="font-display text-5xl md:text-8xl lg:text-9xl font-bold tracking-tight leading-[0.95] mb-8 text-foreground">
               We engineer <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-500 to-purple-600 animate-gradient-x">tomorrow's</span> giants.
             </motion.h1>
             
-            <motion.p variants={fadeInUp} className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed font-light">
+            <motion.p variants={fadeInUp} className="text-lg md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed font-light">
               Vengine.io is the operational backbone for breakthrough companies. Intelligent software, strategic growth, and world-class engineering.
             </motion.p>
             
-            <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="rounded-full px-10 text-lg h-16 bg-primary text-primary-foreground hover:bg-primary/90 shadow-xl shadow-primary/25 hover:scale-105 transition-all duration-300">
+            <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4 sm:px-0">
+              <Button size="lg" className="w-full sm:w-auto rounded-full px-10 text-lg h-14 md:h-16 bg-primary text-primary-foreground hover:bg-primary/90 shadow-xl shadow-primary/25 hover:scale-105 transition-all duration-300">
                 Explore Ecosystem
               </Button>
-              <Button variant="outline" size="lg" className="rounded-full px-10 text-lg h-16 backdrop-blur-md bg-background/30 border-primary/20 hover:bg-primary/10 hover:border-primary/50 transition-all duration-300">
+              <Button variant="outline" size="lg" className="w-full sm:w-auto rounded-full px-10 text-lg h-14 md:h-16 backdrop-blur-md bg-background/30 border-primary/20 hover:bg-primary/10 hover:border-primary/50 transition-all duration-300">
                 Partner With Us
               </Button>
             </motion.div>
@@ -157,13 +157,13 @@ export default function Home() {
       </section>
 
       {/* Ecosystem Bento Grid */}
-      <section id="ecosystem" className="py-32 bg-secondary/10 relative">
+      <section id="ecosystem" className="py-20 md:py-32 bg-secondary/10 relative">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent opacity-50" />
         <div className="container mx-auto px-6 relative">
-          <div className="mb-16 md:flex justify-between items-end">
+          <div className="mb-12 md:mb-16 md:flex justify-between items-end">
             <div className="max-w-2xl">
-              <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">The Ecosystem</h2>
-              <p className="text-xl text-muted-foreground font-light">
+              <h2 className="font-display text-4xl md:text-5xl font-bold mb-4 md:mb-6">The Ecosystem</h2>
+              <p className="text-lg md:text-xl text-muted-foreground font-light">
                 Three pillars. One engine. We provide the infrastructure for exponential growth.
               </p>
             </div>
@@ -173,20 +173,20 @@ export default function Home() {
             {/* Main Feature - Healiot */}
             <motion.div 
               whileHover={{ y: -5 }}
-              className="md:col-span-2 row-span-2 relative overflow-hidden rounded-3xl bg-background border border-border/50 shadow-sm group"
+              className="md:col-span-2 row-span-2 relative overflow-hidden rounded-3xl bg-background border border-border/50 shadow-sm group min-h-[400px]"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-transparent transition-opacity group-hover:from-teal-500/10" />
-              <div className="p-10 h-full flex flex-col justify-between relative z-10">
+              <div className="p-8 md:p-10 h-full flex flex-col justify-between relative z-10">
                 <div>
                   <div className="w-16 h-16 rounded-2xl bg-teal-500/10 flex items-center justify-center text-teal-600 mb-6">
                     <Cpu className="w-8 h-8" />
                   </div>
-                  <h3 className="font-display text-4xl font-bold mb-4">Healiot</h3>
-                  <p className="text-xl text-muted-foreground max-w-md">
+                  <h3 className="font-display text-3xl md:text-4xl font-bold mb-4">Healiot</h3>
+                  <p className="text-lg md:text-xl text-muted-foreground max-w-md">
                     Our Information Technology powerhouse. Building robust, scalable infrastructure for the digital age.
                   </p>
                 </div>
-                <div className="flex gap-4 mt-8">
+                <div className="flex flex-wrap gap-3 md:gap-4 mt-8">
                    <div className="px-4 py-2 rounded-full bg-secondary/50 text-sm font-medium">Cloud Architecture</div>
                    <div className="px-4 py-2 rounded-full bg-secondary/50 text-sm font-medium">Cyber Security</div>
                 </div>
@@ -236,16 +236,16 @@ export default function Home() {
       </section>
 
       {/* Expertise Marquee/Grid */}
-      <section id="about" className="py-32 bg-background">
+      <section id="about" className="py-20 md:py-32 bg-background">
         <div className="container mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-20">
+          <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
              <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">Core Competencies</h2>
-             <p className="text-xl text-muted-foreground font-light">
+             <p className="text-lg md:text-xl text-muted-foreground font-light">
                We don't just advise; we execute. Our deep technical expertise allows us to tackle the most complex challenges.
              </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {[
               { icon: Globe, title: "IT Consultation", desc: "Strategic technology assessment and roadmap planning." },
               { icon: Cpu, title: "Product Dev", desc: "End-to-end software engineering from MVP to scale." },
@@ -267,15 +267,15 @@ export default function Home() {
       </section>
 
       {/* Products Showcase - Masonry/Grid */}
-      <section id="products" className="py-32 bg-background relative overflow-hidden">
+      <section id="products" className="py-20 md:py-32 bg-background relative overflow-hidden">
         {/* Background blobs */}
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
         
         <div className="container mx-auto px-6 relative z-10">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-12 md:mb-20 gap-8">
             <div className="max-w-2xl">
-              <h2 className="font-display text-4xl md:text-6xl font-bold mb-6">Our Products</h2>
-              <p className="text-xl text-muted-foreground">
+              <h2 className="font-display text-4xl md:text-6xl font-bold mb-4 md:mb-6">Our Products</h2>
+              <p className="text-lg md:text-xl text-muted-foreground">
                 A suite of next-generation tools redefining industries.
               </p>
             </div>
@@ -329,16 +329,16 @@ export default function Home() {
       </section>
 
       {/* Process Section - Horizontal Steps */}
-      <section id="process" className="py-32 bg-secondary/5 border-y border-border/50">
+      <section id="process" className="py-20 md:py-32 bg-secondary/5 border-y border-border/50">
         <div className="container mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="font-display text-4xl font-bold mb-6">The Studio Model</h2>
-            <p className="text-xl text-muted-foreground font-light">
+          <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+            <h2 className="font-display text-4xl font-bold mb-4 md:mb-6">The Studio Model</h2>
+            <p className="text-lg md:text-xl text-muted-foreground font-light">
               From zero to one, and one to scale. Our proven methodology for building category winners.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4 relative">
             <div className="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-border to-transparent" />
             
             {[
@@ -347,11 +347,11 @@ export default function Home() {
               { step: "03", title: "Build", desc: "Rapid prototyping and MVP development." },
               { step: "04", title: "Scale", desc: "Growth hacking and commercial expansion." }
             ].map((item, i) => (
-              <div key={i} className="relative pt-8 md:pt-0 group">
-                <div className="md:absolute top-0 left-1/2 md:-translate-x-1/2 w-24 h-24 rounded-full bg-background border-4 border-secondary flex items-center justify-center font-display font-bold text-3xl text-primary mb-6 z-10 group-hover:border-primary group-hover:scale-110 transition-all duration-300 shadow-lg">
+              <div key={i} className="relative pt-0 md:pt-0 group flex flex-col items-center md:block">
+                <div className="relative md:absolute top-0 left-1/2 md:-translate-x-1/2 w-20 h-20 md:w-24 md:h-24 rounded-full bg-background border-4 border-secondary flex items-center justify-center font-display font-bold text-2xl md:text-3xl text-primary mb-6 z-10 group-hover:border-primary group-hover:scale-110 transition-all duration-300 shadow-lg">
                   {item.step}
                 </div>
-                <div className="mt-4 md:mt-32 text-center p-6 rounded-2xl hover:bg-background/80 transition-colors">
+                <div className="mt-4 md:mt-32 text-center p-6 rounded-2xl hover:bg-background/80 transition-colors w-full">
                   <h3 className="font-display text-xl font-bold mb-3">{item.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     {item.desc}
@@ -364,22 +364,22 @@ export default function Home() {
       </section>
 
       {/* Modern CTA */}
-      <section className="py-32 relative overflow-hidden">
+      <section className="py-20 md:py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-primary/90">
            <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150 mix-blend-overlay"></div>
         </div>
         <div className="container mx-auto px-6 relative z-10 text-center">
-          <h2 className="font-display text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight">
+          <h2 className="font-display text-4xl md:text-7xl font-bold text-white mb-6 md:mb-8 tracking-tight">
             Ready to build <br/> the impossible?
           </h2>
-          <p className="text-white/80 text-xl max-w-2xl mx-auto mb-12 font-light">
+          <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 md:mb-12 font-light">
             We partner with visionary founders and enterprises to create the next generation of technology companies.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button size="lg" className="rounded-full px-12 h-16 text-lg bg-white text-primary hover:bg-white/90 font-bold shadow-2xl">
+          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center px-4 sm:px-0">
+            <Button size="lg" className="w-full sm:w-auto rounded-full px-12 h-14 md:h-16 text-lg bg-white text-primary hover:bg-white/90 font-bold shadow-2xl">
               Pitch Your Idea
             </Button>
-            <Button size="lg" variant="outline" className="rounded-full px-12 h-16 text-lg border-white/30 text-white hover:bg-white/10 backdrop-blur-sm">
+            <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full px-12 h-14 md:h-16 text-lg border-white/30 text-white hover:bg-white/10 backdrop-blur-sm">
               Contact Team
             </Button>
           </div>
