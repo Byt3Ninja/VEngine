@@ -217,7 +217,7 @@ export default function Home() {
               { name: "Virtual Incubator", category: "Startup Tech", color: "bg-blue-600", link: "#" },
               { name: "SIGNLayer.net", category: "Digital Signature", color: "bg-emerald-600", link: "https://signlayer.net/" },
               { name: "Wq3.ae", category: "Real Estate", color: "bg-amber-600", link: "#" },
-              { name: "Wq3ly.com", category: "Platform", color: "bg-orange-600", link: "https://wq3ly.com" },
+              { name: "Tawqe3y.com", category: "Platform", color: "bg-orange-600", link: "https://tawqe3y.com" },
               { name: "Instadr.app", category: "Health Tech", color: "bg-cyan-600", link: "https://instadr.app" },
               { name: "Instamsg.app", category: "Communication", color: "bg-indigo-600", link: "https://instamsg.app" },
               { name: "Aifabrica.app", category: "AI Tools", color: "bg-purple-600", link: "https://aifabrica.app" },
