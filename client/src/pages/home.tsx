@@ -283,7 +283,7 @@ export default function Home() {
             {[
               { name: "Virtual Incubator", category: "Startup Tech", color: "from-blue-600 to-blue-800", link: "#", image: virtualIncubatorImg },
               { name: "SIGNLayer.net", category: "Digital Signature", color: "from-emerald-600 to-teal-800", link: "https://signlayer.net/", image: signLayerImg },
-              { name: "Wq3.ae", category: "Real Estate", color: "from-amber-600 to-orange-800", link: "#", image: wq3Img },
+              { name: "Wq3.ae", category: "Real Estate", color: "from-amber-600 to-orange-800", link: "https://wq3.ae", image: wq3Img },
               { name: "Tawqe3y.com", category: "Platform", color: "from-orange-600 to-red-800", link: "https://tawqe3y.com", image: tawqe3yImg },
               { name: "Instadr.app", category: "Health Tech", color: "from-cyan-600 to-blue-800", link: "https://instadr.app", image: instadrImg },
               { name: "Instamsg.app", category: "Communication", color: "from-indigo-600 to-violet-800", link: "https://instamsg.app", image: instamsgImg },
@@ -296,7 +296,9 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
-                href={product.link} 
+                href={product.link}
+                target={product.link.startsWith("http") ? "_blank" : undefined}
+                rel={product.link.startsWith("http") ? "noopener noreferrer" : undefined}
                 key={i} 
                 className="group relative overflow-hidden rounded-[2rem] bg-secondary/20 aspect-[3/4] cursor-pointer shadow-sm hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500"
               >
