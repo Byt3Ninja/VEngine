@@ -52,7 +52,7 @@ export default function Home() {
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center text-white shadow-lg shadow-primary/20">
               <Zap className="w-5 h-5" />
             </div>
-            <span>vengine<span className="text-primary">.io</span></span>
+            <span>Venture <span className="text-primary">Engine</span></span>
           </div>
 
           <div className="hidden md:flex items-center gap-8 text-sm font-medium bg-background/50 backdrop-blur-md px-8 py-3 rounded-full border border-white/10 shadow-sm">
@@ -243,7 +243,7 @@ export default function Home() {
                 <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground">
                   <Zap className="w-4 h-4" />
                 </div>
-                <span>vengine<span className="text-primary">.io</span></span>
+                <span>Venture <span className="text-primary">Engine</span></span>
               </div>
               <p className="text-muted-foreground max-w-sm">
                 The operating system for venture building. We turn ambitious ideas into market-leading companies.
