@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venture Engine (Vengine.io) | We Engineer Tomorrow's Giants</title>
+    <meta name="description" content="Vengine.io is the operational backbone for breakthrough companies. We partner with visionary founders to build intelligent software, drive strategic growth, and deploy world-class engineering.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              border: "hsl(var(--border))",
+              input: "hsl(var(--input))",
+              ring: "hsl(var(--ring))",
+              background: "hsl(var(--background))",
+              foreground: "hsl(var(--foreground))",
+              primary: {
+                DEFAULT: "hsl(var(--primary))",
+                foreground: "hsl(var(--primary-foreground))",
+              },
+              secondary: {
+                DEFAULT: "hsl(var(--secondary))",
+                foreground: "hsl(var(--secondary-foreground))",
+              },
+              muted: {
+                DEFAULT: "hsl(var(--muted))",
+                foreground: "hsl(var(--muted-foreground))",
+              },
+              card: {
+                DEFAULT: "hsl(var(--card))",
+                foreground: "hsl(var(--card-foreground))",
+              }
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Outfit", "sans-serif"],
+            },
+            animation: {
+                'fade-in': 'fadeIn 0.5s ease-out',
+                'slide-up': 'slideUp 0.8s ease-out',
+            },
+            keyframes: {
+                fadeIn: {
+                    '0%': { opacity: '0' },
+                    '100%': { opacity: '1' },
+                },
+                slideUp: {
+                    '0%': { opacity: '0', transform: 'translateY(20px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' },
+                }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      :root {
+        --background: 0 0% 100%;
+        --foreground: 222.2 84% 4.9%;
+        --card: 0 0% 100%;
+        --card-foreground: 222.2 84% 4.9%;
+        --primary: 221.2 83.2% 53.3%;
+        --primary-foreground: 210 40% 98%;
+        --secondary: 210 40% 96.1%;
+        --secondary-foreground: 222.2 47.4% 11.2%;
+        --muted: 210 40% 96.1%;
+        --muted-foreground: 215.4 16.3% 46.9%;
+        --border: 214.3 31.8% 91.4%;
+        --input: 214.3 31.8% 91.4%;
+        --ring: 221.2 83.2% 53.3%;
+      }
+      .font-display { font-family: 'Outfit', sans-serif; }
+      .font-sans { font-family: 'Inter', sans-serif; }
+    </style>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-background text-foreground font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 py-6">
+        <div class="container mx-auto px-6 flex items-center justify-between">
+            <div class="flex items-center gap-2 font-display font-bold text-2xl tracking-tighter z-50">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center text-white shadow-lg shadow-primary/20">
+                    <i data-lucide="zap" class="w-5 h-5"></i>
+                </div>
+                <span>vengine<span class="text-primary">.io</span></span>
+            </div>
+
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium bg-background/50 backdrop-blur-md px-8 py-3 rounded-full border border-white/10 shadow-sm">
+                <a href="#about" class="hover:text-primary transition-colors">Expertise</a>
+                <a href="#process" class="hover:text-primary transition-colors">Process</a>
+            </div>
+
+            <div class="hidden md:block">
+                <a href="mailto:hello@vengine.io" class="inline-flex items-center justify-center rounded-full text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-foreground text-background hover:bg-foreground/90 h-10 py-2 px-6 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">
+                    Contact Us
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden p-2 z-50">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-background/95 backdrop-blur-xl p-6 flex flex-col items-center justify-center gap-8">
+            <a href="#about" class="mobile-link text-3xl font-display font-bold hover:text-primary transition-colors">Expertise</a>
+            <a href="#process" class="mobile-link text-3xl font-display font-bold hover:text-primary transition-colors">Process</a>
+            <a href="mailto:hello@vengine.io" class="w-full max-w-xs inline-flex items-center justify-center rounded-full text-lg font-medium transition-colors bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8 mt-8">
+                Contact Us
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Background -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-background/90 via-background/40 to-background z-10"></div>
+            <img src="./assets/generated_images/abstract_health_tech_network_visualization.png" alt="Abstract Network" class="w-full h-full object-cover scale-105">
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center animate-slide-up">
+            <div class="max-w-5xl mx-auto">
+                <div class="mb-8 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold uppercase tracking-wider border border-primary/20 backdrop-blur-sm">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                    </span>
+                    The Venture Engine
+                </div>
+                
+                <h1 class="font-display text-5xl md:text-8xl lg:text-9xl font-bold tracking-tight leading-[0.95] mb-8 text-foreground">
+                    We engineer <br />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-500 to-purple-600">tomorrow's</span> giants.
+                </h1>
+                
+                <p class="text-lg md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed font-light">
+                    Vengine.io is the operational backbone for breakthrough companies. Intelligent software, strategic growth, and world-class engineering.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center px-4 sm:px-0">
+                    <a href="#about" class="w-full sm:w-auto inline-flex items-center justify-center rounded-full text-lg font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-primary text-primary-foreground hover:bg-primary/90 h-14 md:h-16 px-10 shadow-xl shadow-primary/25 hover:scale-105 transition-all duration-300">
+                        Our Expertise
+                    </a>
+                    <a href="mailto:partners@vengine.io" class="w-full sm:w-auto inline-flex items-center justify-center rounded-full text-lg font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background border border-primary/20 hover:bg-primary/10 hover:border-primary/50 backdrop-blur-md bg-background/30 h-14 md:h-16 px-10 transition-all duration-300">
+                        Partner With Us
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground/50 animate-fade-in delay-1000">
+            <span class="text-xs uppercase tracking-widest">Scroll</span>
+            <div class="w-px h-12 bg-gradient-to-b from-primary/50 to-transparent"></div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="about" class="py-20 md:py-32 bg-background">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+                <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">Core Competencies</h2>
+                <p class="text-lg md:text-xl text-muted-foreground font-light">
+                    We don't just advise; we execute. Our deep technical expertise allows us to tackle the most complex challenges.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <!-- Item 1 -->
+                <div class="group p-8 rounded-3xl bg-secondary/30 hover:bg-secondary/60 transition-colors duration-300 border border-transparent hover:border-primary/20">
+                    <div class="w-14 h-14 rounded-2xl bg-background shadow-sm flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="globe" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-3">IT Consultation</h3>
+                    <p class="text-muted-foreground leading-relaxed text-sm">Strategic technology assessment and roadmap planning.</p>
+                </div>
+                <!-- Item 2 -->
+                <div class="group p-8 rounded-3xl bg-secondary/30 hover:bg-secondary/60 transition-colors duration-300 border border-transparent hover:border-primary/20">
+                    <div class="w-14 h-14 rounded-2xl bg-background shadow-sm flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="cpu" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-3">Product Dev</h3>
+                    <p class="text-muted-foreground leading-relaxed text-sm">End-to-end software engineering from MVP to scale.</p>
+                </div>
+                <!-- Item 3 -->
+                <div class="group p-8 rounded-3xl bg-secondary/30 hover:bg-secondary/60 transition-colors duration-300 border border-transparent hover:border-primary/20">
+                    <div class="w-14 h-14 rounded-2xl bg-background shadow-sm flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="activity" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-3">Data Analytics</h3>
+                    <p class="text-muted-foreground leading-relaxed text-sm">Turning raw data into actionable business intelligence.</p>
+                </div>
+                <!-- Item 4 -->
+                <div class="group p-8 rounded-3xl bg-secondary/30 hover:bg-secondary/60 transition-colors duration-300 border border-transparent hover:border-primary/20">
+                    <div class="w-14 h-14 rounded-2xl bg-background shadow-sm flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="users" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-3">Cyber Security</h3>
+                    <p class="text-muted-foreground leading-relaxed text-sm">Enterprise-grade protection for critical assets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-20 md:py-32 bg-secondary/5 border-y border-border/50">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+                <h2 class="font-display text-4xl font-bold mb-4 md:mb-6">The Studio Model</h2>
+                <p class="text-lg md:text-xl text-muted-foreground font-light">
+                    From zero to one, and one to scale. Our proven methodology for building category winners.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4 relative">
+                <div class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-border to-transparent"></div>
+                
+                <!-- Step 1 -->
+                <div class="relative pt-0 md:pt-0 group flex flex-col items-center md:block">
+                    <div class="relative md:absolute top-0 left-1/2 md:-translate-x-1/2 w-20 h-20 md:w-24 md:h-24 rounded-full bg-background border-4 border-secondary flex items-center justify-center font-display font-bold text-2xl md:text-3xl text-primary mb-6 z-10 group-hover:border-primary group-hover:scale-110 transition-all duration-300 shadow-lg">01</div>
+                    <div class="mt-4 md:mt-32 text-center p-6 rounded-2xl hover:bg-background/80 transition-colors w-full">
+                        <h3 class="font-display text-xl font-bold mb-3">Ideation</h3>
+                        <p class="text-muted-foreground text-sm leading-relaxed">Deep market research to identify unmet needs.</p>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="relative pt-0 md:pt-0 group flex flex-col items-center md:block">
+                    <div class="relative md:absolute top-0 left-1/2 md:-translate-x-1/2 w-20 h-20 md:w-24 md:h-24 rounded-full bg-background border-4 border-secondary flex items-center justify-center font-display font-bold text-2xl md:text-3xl text-primary mb-6 z-10 group-hover:border-primary group-hover:scale-110 transition-all duration-300 shadow-lg">02</div>
+                    <div class="mt-4 md:mt-32 text-center p-6 rounded-2xl hover:bg-background/80 transition-colors w-full">
+                        <h3 class="font-display text-xl font-bold mb-3">Validation</h3>
+                        <p class="text-muted-foreground text-sm leading-relaxed">Stress-testing viability with real-world data.</p>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="relative pt-0 md:pt-0 group flex flex-col items-center md:block">
+                    <div class="relative md:absolute top-0 left-1/2 md:-translate-x-1/2 w-20 h-20 md:w-24 md:h-24 rounded-full bg-background border-4 border-secondary flex items-center justify-center font-display font-bold text-2xl md:text-3xl text-primary mb-6 z-10 group-hover:border-primary group-hover:scale-110 transition-all duration-300 shadow-lg">03</div>
+                    <div class="mt-4 md:mt-32 text-center p-6 rounded-2xl hover:bg-background/80 transition-colors w-full">
+                        <h3 class="font-display text-xl font-bold mb-3">Build</h3>
+                        <p class="text-muted-foreground text-sm leading-relaxed">Rapid prototyping and MVP development.</p>
+                    </div>
+                </div>
+                <!-- Step 4 -->
+                <div class="relative pt-0 md:pt-0 group flex flex-col items-center md:block">
+                    <div class="relative md:absolute top-0 left-1/2 md:-translate-x-1/2 w-20 h-20 md:w-24 md:h-24 rounded-full bg-background border-4 border-secondary flex items-center justify-center font-display font-bold text-2xl md:text-3xl text-primary mb-6 z-10 group-hover:border-primary group-hover:scale-110 transition-all duration-300 shadow-lg">04</div>
+                    <div class="mt-4 md:mt-32 text-center p-6 rounded-2xl hover:bg-background/80 transition-colors w-full">
+                        <h3 class="font-display text-xl font-bold mb-3">Scale</h3>
+                        <p class="text-muted-foreground text-sm leading-relaxed">Growth hacking and commercial expansion.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 md:py-32 relative overflow-hidden">
+        <div class="absolute inset-0 bg-primary/90">
+           <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150 mix-blend-overlay"></div>
+        </div>
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <h2 class="font-display text-4xl md:text-7xl font-bold text-white mb-6 md:mb-8 tracking-tight">
+                Ready to build <br/> the impossible?
+            </h2>
+            <p class="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 md:mb-12 font-light">
+                We partner with visionary founders and enterprises to create the next generation of technology companies.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center px-4 sm:px-0">
+                <a href="mailto:pitch@vengine.io" class="w-full sm:w-auto inline-flex items-center justify-center rounded-full text-lg font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-white text-primary hover:bg-white/90 h-14 md:h-16 px-12 shadow-2xl">
+                    Pitch Your Idea
+                </a>
+                <a href="mailto:hello@vengine.io" class="w-full sm:w-auto inline-flex items-center justify-center rounded-full text-lg font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background border-white/30 text-white hover:bg-white/10 backdrop-blur-sm border h-14 md:h-16 px-12">
+                    Contact Team
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-background py-16 border-t border-border">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 font-display font-bold text-2xl tracking-tighter mb-6">
+                        <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground">
+                            <i data-lucide="zap" class="w-4 h-4"></i>
+                        </div>
+                        <span>vengine<span class="text-primary">.io</span></span>
+                    </div>
+                    <p class="text-muted-foreground max-w-sm">
+                        The operating system for venture building. We turn ambitious ideas into market-leading companies.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-6">Company</h4>
+                    <ul class="space-y-4 text-sm text-muted-foreground">
+                        <li><a href="#about" class="hover:text-primary transition-colors">Expertise</a></li>
+                        <li><a href="mailto:careers@vengine.io" class="hover:text-primary transition-colors">Careers</a></li>
+                        <li><a href="mailto:hello@vengine.io" class="hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-6">Legal</h4>
+                    <ul class="space-y-4 text-sm text-muted-foreground">
+                        <li><a href="privacy.html" class="hover:text-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-primary transition-colors">Terms of Service</a></li>
+                        <li><a href="privacy.html" class="hover:text-primary transition-colors">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-border/50">
+                <div class="text-sm text-muted-foreground">
+                    © 2024 Venture Engine. All rights reserved.
+                </div>
+                <div class="flex gap-6">
+                    <a href="#" class="text-muted-foreground hover:text-foreground transition-colors"><i data-lucide="globe" class="w-5 h-5"></i></a>
+                    <a href="#" class="text-muted-foreground hover:text-foreground transition-colors"><i data-lucide="users" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-consent" class="hidden fixed bottom-0 left-0 right-0 z-50 p-4 md:p-6 transition-all duration-500 transform translate-y-full opacity-0">
+        <div class="container mx-auto max-w-5xl">
+            <div class="bg-background/95 backdrop-blur-md border border-primary/20 rounded-2xl shadow-2xl p-6 md:flex items-center justify-between gap-6 relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-blue-500 to-purple-600"></div>
+                
+                <div class="flex-1 mb-4 md:mb-0">
+                    <h3 class="font-display font-bold text-lg mb-2 flex items-center gap-2">
+                        🍪 Cookie Settings
+                    </h3>
+                    <p class="text-muted-foreground text-sm leading-relaxed">
+                        We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. 
+                        By clicking "Accept All", you consent to our use of cookies. Read our <a href="privacy.html" class="text-primary hover:underline underline-offset-4 font-medium">Cookie Policy</a>.
+                    </p>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <button id="decline-cookies" class="inline-flex items-center justify-center rounded-full text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background border border-primary/20 hover:bg-primary/5 h-10 px-4 py-2">
+                        Decline
+                    </button>
+                    <button id="accept-cookies" class="inline-flex items-center justify-center rounded-full text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/20 h-10 px-4 py-2">
+                        Accept All
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-background/80', 'backdrop-blur-xl', 'border-b', 'border-white/5', 'shadow-sm', 'py-4');
+                navbar.classList.remove('py-6');
+            } else {
+                navbar.classList.remove('bg-background/80', 'backdrop-blur-xl', 'border-b', 'border-white/5', 'shadow-sm', 'py-4');
+                navbar.classList.add('py-6');
+            }
+        });
+
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenu.classList.contains('hidden') ? 'menu' : 'x';
+            // Force re-render of icon
+            mobileMenuBtn.innerHTML = `<i data-lucide="${icon}"></i>`;
+            lucide.createIcons();
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.innerHTML = `<i data-lucide="menu"></i>`;
+                lucide.createIcons();
+            });
+        });
+
+        // Cookie Consent
+        const cookieBanner = document.getElementById('cookie-consent');
+        const acceptBtn = document.getElementById('accept-cookies');
+        const declineBtn = document.getElementById('decline-cookies');
+
+        function showBanner() {
+            cookieBanner.classList.remove('hidden');
+            // Small delay to allow display:block to apply before transition
+            setTimeout(() => {
+                cookieBanner.classList.remove('translate-y-full', 'opacity-0');
+            }, 100);
+        }
+
+        function hideBanner() {
+            cookieBanner.classList.add('translate-y-full', 'opacity-0');
+            setTimeout(() => {
+                cookieBanner.classList.add('hidden');
+            }, 500);
+        }
+
+        if (!localStorage.getItem('cookieConsent')) {
+            setTimeout(showBanner, 1000);
+        }
+
+        acceptBtn.addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'true');
+            hideBanner();
+        });
+
+        declineBtn.addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'false');
+            hideBanner();
+        });
+    </script>
+</body>
+</html>
