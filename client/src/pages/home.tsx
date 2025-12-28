@@ -4,15 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useState, useEffect, useRef } from "react";
 import heroBg from "@assets/generated_images/abstract_health_tech_network_visualization.png";
-import virtualIncubatorImg from "@assets/generated_images/virtual_incubator_dashboard_ui.png";
-import signLayerImg from "@assets/generated_images/signlayer_digital_signature_ui.png";
-import wq3Img from "@assets/generated_images/wq3_real_estate_platform_ui.png";
-import tawqe3yImg from "@assets/generated_images/tawqe3y_saas_platform_ui.png";
-import instadrImg from "@assets/generated_images/instadr_telemedicine_app_ui.png";
-import instamsgImg from "@assets/generated_images/instamsg_messaging_app_ui.png";
-import aifabricaImg from "@assets/generated_images/aifabrica_ai_tools_ui.png";
-import saaserpImg from "@assets/generated_images/saaserp_erp_dashboard_ui.png";
-import sawaImg from "@assets/generated_images/sawa_secure_chat_ui.png";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -65,9 +56,7 @@ export default function Home() {
           </div>
 
           <div className="hidden md:flex items-center gap-8 text-sm font-medium bg-background/50 backdrop-blur-md px-8 py-3 rounded-full border border-white/10 shadow-sm">
-            <a href="#about" className="hover:text-primary transition-colors">About</a>
-            <a href="#ecosystem" className="hover:text-primary transition-colors">Ecosystem</a>
-            <a href="#products" className="hover:text-primary transition-colors">Products</a>
+            <a href="#about" className="hover:text-primary transition-colors">Expertise</a>
             <a href="#process" className="hover:text-primary transition-colors">Process</a>
           </div>
 
@@ -88,9 +77,7 @@ export default function Home() {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden fixed inset-0 z-40 bg-background/95 backdrop-blur-xl p-6 flex flex-col items-center justify-center gap-8 animate-in fade-in slide-in-from-bottom-10 duration-300">
-            <a href="#about" onClick={() => setIsMobileMenuOpen(false)} className="text-3xl font-display font-bold hover:text-primary transition-colors">About</a>
-            <a href="#ecosystem" onClick={() => setIsMobileMenuOpen(false)} className="text-3xl font-display font-bold hover:text-primary transition-colors">Ecosystem</a>
-            <a href="#products" onClick={() => setIsMobileMenuOpen(false)} className="text-3xl font-display font-bold hover:text-primary transition-colors">Products</a>
+            <a href="#about" onClick={() => setIsMobileMenuOpen(false)} className="text-3xl font-display font-bold hover:text-primary transition-colors">Expertise</a>
             <a href="#process" onClick={() => setIsMobileMenuOpen(false)} className="text-3xl font-display font-bold hover:text-primary transition-colors">Process</a>
             <Button size="lg" className="w-full max-w-xs rounded-full text-lg mt-8" asChild>
               <a href="mailto:hello@vengine.io">Contact Us</a>
@@ -137,7 +124,7 @@ export default function Home() {
             
             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4 sm:px-0">
               <Button size="lg" className="w-full sm:w-auto rounded-full px-10 text-lg h-14 md:h-16 bg-primary text-primary-foreground hover:bg-primary/90 shadow-xl shadow-primary/25 hover:scale-105 transition-all duration-300" asChild>
-                <a href="#ecosystem">Explore Ecosystem</a>
+                <a href="#about">Our Expertise</a>
               </Button>
               <Button variant="outline" size="lg" className="w-full sm:w-auto rounded-full px-10 text-lg h-14 md:h-16 backdrop-blur-md bg-background/30 border-primary/20 hover:bg-primary/10 hover:border-primary/50 transition-all duration-300" asChild>
                 <a href="mailto:partners@vengine.io">Partner With Us</a>
@@ -156,80 +143,6 @@ export default function Home() {
           <span className="text-xs uppercase tracking-widest">Scroll</span>
           <div className="w-px h-12 bg-gradient-to-b from-primary/50 to-transparent" />
         </motion.div>
-      </section>
-
-      {/* Ecosystem Bento Grid */}
-      <section id="ecosystem" className="py-20 md:py-32 bg-secondary/10 relative">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent opacity-50" />
-        <div className="container mx-auto px-6 relative">
-          <div className="mb-12 md:mb-16 md:flex justify-between items-end">
-            <div className="max-w-2xl">
-              <h2 className="font-display text-4xl md:text-5xl font-bold mb-4 md:mb-6">The Ecosystem</h2>
-              <p className="text-lg md:text-xl text-muted-foreground font-light">
-                Three pillars. One engine. We provide the infrastructure for exponential growth.
-              </p>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-fr">
-            {/* Healiot */}
-            <motion.div 
-              whileHover={{ y: -5 }}
-              className="relative overflow-hidden rounded-3xl bg-background border border-border/50 shadow-sm group"
-            >
-              <div className="p-8 h-full flex flex-col">
-                <div className="w-14 h-14 rounded-2xl bg-teal-500/10 flex items-center justify-center text-teal-600 mb-6">
-                  <Cpu className="w-7 h-7" />
-                </div>
-                <h3 className="font-display text-2xl font-bold mb-2">Healiot</h3>
-                <p className="text-muted-foreground">
-                  Our Information Technology powerhouse. Building robust, scalable infrastructure.
-                </p>
-                <div className="mt-auto pt-8 flex justify-end">
-                   <ArrowUpRight className="text-teal-500 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Growthlabs */}
-            <motion.div 
-              whileHover={{ y: -5 }}
-              className="relative overflow-hidden rounded-3xl bg-background border border-border/50 shadow-sm group"
-            >
-              <div className="p-8 h-full flex flex-col">
-                <div className="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-600 mb-6">
-                  <Rocket className="w-7 h-7" />
-                </div>
-                <h3 className="font-display text-2xl font-bold mb-2">Growthlabs</h3>
-                <p className="text-muted-foreground">
-                  Ecosystem enabler through intelligent software.
-                </p>
-                <div className="mt-auto pt-8 flex justify-end">
-                   <ArrowUpRight className="text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Bluecake */}
-            <motion.div 
-              whileHover={{ y: -5 }}
-              className="relative overflow-hidden rounded-3xl bg-background border border-border/50 shadow-sm group"
-            >
-              <div className="p-8 h-full flex flex-col">
-                <div className="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center text-purple-600 mb-6">
-                  <Laptop className="w-7 h-7" />
-                </div>
-                <h3 className="font-display text-2xl font-bold mb-2">Bluecake</h3>
-                <p className="text-muted-foreground">
-                  Phygital Marketing Agency bridging worlds.
-                </p>
-                <div className="mt-auto pt-8 flex justify-end">
-                   <ArrowUpRight className="text-purple-500 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
       </section>
 
       {/* Expertise Marquee/Grid */}
@@ -258,70 +171,6 @@ export default function Home() {
                   {area.desc}
                 </p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Products Showcase - Masonry/Grid */}
-      <section id="products" className="py-20 md:py-32 bg-background relative overflow-hidden">
-        {/* Background blobs */}
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
-        
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-12 md:mb-20 gap-8">
-            <div className="max-w-2xl">
-              <h2 className="font-display text-4xl md:text-6xl font-bold mb-4 md:mb-6">Our Products</h2>
-              <p className="text-lg md:text-xl text-muted-foreground">
-                A suite of next-generation tools redefining industries.
-              </p>
-            </div>
-            <Button variant="outline" className="hidden md:flex rounded-full group">
-              View All Products <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </Button>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {[
-              { name: "Virtual Incubator", category: "Startup Tech", color: "from-blue-600 to-blue-800", link: "#", image: virtualIncubatorImg },
-              { name: "SIGNLayer.net", category: "Digital Signature", color: "from-emerald-600 to-teal-800", link: "https://signlayer.net/", image: signLayerImg },
-              { name: "Wq3.ae", category: "Real Estate", color: "from-amber-600 to-orange-800", link: "https://wq3.ae", image: wq3Img },
-              { name: "Tawqe3y.com", category: "Platform", color: "from-orange-600 to-red-800", link: "https://tawqe3y.com", image: tawqe3yImg },
-              { name: "Instadr.app", category: "Health Tech", color: "from-cyan-600 to-blue-800", link: "https://instadr.app", image: instadrImg },
-              { name: "Instamsg.app", category: "Communication", color: "from-indigo-600 to-violet-800", link: "https://instamsg.app", image: instamsgImg },
-              { name: "Aifabrica.app", category: "AI Tools", color: "from-purple-600 to-fuchsia-800", link: "https://aifabrica.app", image: aifabricaImg },
-              { name: "Saaserp.net", category: "Startup ERP", color: "from-blue-500 to-indigo-700", link: "https://saaserp.net", image: saaserpImg },
-              { name: "Sawa.chat", category: "Secure Chat", color: "from-emerald-500 to-green-700", link: "https://sawa.chat", image: sawaImg },
-            ].map((product, i) => (
-              <motion.a 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.05 }}
-                href={product.link}
-                target={product.link.startsWith("http") ? "_blank" : undefined}
-                rel={product.link.startsWith("http") ? "noopener noreferrer" : undefined}
-                key={i} 
-                className="group relative overflow-hidden rounded-[2rem] bg-secondary/20 aspect-[3/4] cursor-pointer shadow-sm hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500"
-              >
-                <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-0 group-hover:opacity-90 transition-opacity duration-500 z-10 mix-blend-multiply`} />
-                <img 
-                  src={product.image}
-                  alt={product.name} 
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 z-10" />
-                
-                <div className="absolute bottom-0 left-0 p-8 w-full z-20 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                  <div className="inline-block px-3 py-1 rounded-full bg-white/20 backdrop-blur-md border border-white/10 text-white text-[10px] font-bold uppercase tracking-widest mb-4">
-                    {product.category}
-                  </div>
-                  <h3 className="text-white font-display text-2xl font-bold mb-2 leading-tight">{product.name}</h3>
-                  <div className="h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-500 delay-100 flex items-center text-white/90 text-sm font-medium mt-4">
-                    Visit Platform <ArrowUpRight className="ml-2 w-4 h-4" />
-                  </div>
-                </div>
-              </motion.a>
             ))}
           </div>
         </div>
@@ -404,8 +253,7 @@ export default function Home() {
             <div>
               <h4 className="font-bold mb-6">Company</h4>
               <ul className="space-y-4 text-sm text-muted-foreground">
-                <li><a href="#about" className="hover:text-primary transition-colors">About Us</a></li>
-                <li><a href="#products" className="hover:text-primary transition-colors">Portfolio</a></li>
+                <li><a href="#about" className="hover:text-primary transition-colors">Expertise</a></li>
                 <li><a href="mailto:careers@vengine.io" className="hover:text-primary transition-colors">Careers</a></li>
                 <li><a href="mailto:hello@vengine.io" className="hover:text-primary transition-colors">Contact</a></li>
               </ul>
