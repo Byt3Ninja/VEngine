@@ -246,7 +246,7 @@ export default function Home() {
                 <span>Venture <span className="text-primary">Engine</span></span>
               </div>
               <p className="text-muted-foreground max-w-sm">
-                The operating system for venture building. We turn ambitious ideas into market-leading companies.
+                We engineer tomorrow's giants. The operational backbone for venture building.
               </p>
             </div>
             
