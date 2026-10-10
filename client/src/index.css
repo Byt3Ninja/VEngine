@@ -62,8 +62,8 @@
   --popover: 0 0% 100%;
   --popover-foreground: 220 15% 15%;
 
-  /* Primary: Deep Teal/Medical Blue */
-  --primary: 185 85% 35%;
+  /* Primary: Engine Blue (the Flywheel logo blue, #155dfc) */
+  --primary: 221.3 97.5% 53.5%;
   --primary-foreground: 0 0% 100%;
 
   /* Secondary: Soft Slate */
@@ -74,22 +74,22 @@
   --muted: 210 20% 90%;
   --muted-foreground: 220 10% 45%;
 
-  /* Accent: Vibrant Cyan for tech feel */
-  --accent: 185 85% 95%;
-  --accent-foreground: 185 85% 30%;
+  /* Accent: pale blue tint */
+  --accent: 221 97% 95%;
+  --accent-foreground: 221 90% 40%;
 
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 98%;
 
   --border: 220 15% 90%;
   --input: 220 15% 90%;
-  --ring: 185 85% 35%;
+  --ring: 221.3 97.5% 53.5%;
 
-  --chart-1: 185 70% 45%; /* Teal */
-  --chart-2: 210 70% 45%; /* Blue */
-  --chart-3: 240 70% 60%; /* Indigo */
-  --chart-4: 160 70% 45%; /* Emerald */
-  --chart-5: 280 70% 60%; /* Purple */
+  --chart-1: 221 83% 53%; /* Blue */
+  --chart-2: 262 83% 58%; /* Violet */
+  --chart-3: 32 95% 44%; /* Amber */
+  --chart-4: 330 81% 60%; /* Pink */
+  --chart-5: 215 16% 47%; /* Slate */
 
   --radius: 0.5rem;
 }
@@ -105,8 +105,8 @@
   --popover: 220 25% 13%;
   --popover-foreground: 210 20% 98%;
 
-  /* Primary: Electric Teal */
-  --primary: 185 85% 45%;
+  /* Primary: Electric Blue (#2b7fff) */
+  --primary: 216.2 100% 58.4%;
   --primary-foreground: 220 25% 10%;
 
   --secondary: 220 25% 20%;
@@ -115,21 +115,21 @@
   --muted: 220 25% 20%;
   --muted-foreground: 215 20% 65%;
 
-  --accent: 185 85% 15%;
-  --accent-foreground: 185 85% 85%;
+  --accent: 221 70% 18%;
+  --accent-foreground: 217 100% 85%;
 
   --destructive: 0 62% 30%;
   --destructive-foreground: 0 0% 98%;
 
   --border: 220 25% 20%;
   --input: 220 25% 20%;
-  --ring: 185 85% 45%;
+  --ring: 216.2 100% 58.4%;
 
-  --chart-1: 185 70% 50%;
-  --chart-2: 210 70% 50%;
-  --chart-3: 240 70% 50%;
-  --chart-4: 160 70% 50%;
-  --chart-5: 280 70% 50%;
+  --chart-1: 217 91% 60%;
+  --chart-2: 263 70% 65%;
+  --chart-3: 32 95% 55%;
+  --chart-4: 330 81% 65%;
+  --chart-5: 215 20% 65%;
 }
 
 @layer base {
