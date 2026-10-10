@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Activity, Globe, Cpu, Users, ChevronRight, Menu, X, Rocket, Zap, Laptop, ArrowUpRight } from "lucide-react";
+import { ArrowRight, Activity, Globe, Cpu, Users, ChevronRight, Menu, X, Rocket, Laptop, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/logo";
 import { Card, CardContent } from "@/components/ui/card";
 import { useState, useEffect, useRef } from "react";
 import heroBg from "@assets/generated_images/abstract_health_tech_network_visualization.png";
@@ -48,12 +49,9 @@ export default function Home() {
         }`}
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
-          <div className="flex items-center gap-2 font-display font-bold text-2xl tracking-tighter z-50">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center text-white shadow-lg shadow-primary/20">
-              <Zap className="w-5 h-5" />
-            </div>
-            <span>Venture <span className="text-primary">Engine</span></span>
-          </div>
+          <a href="/" className="z-50">
+            <Logo />
+          </a>
 
           <div className="hidden md:flex items-center gap-8 text-sm font-medium bg-background/50 backdrop-blur-md px-8 py-3 rounded-full border border-white/10 shadow-sm">
             <a href="#about" className="hover:text-primary transition-colors">Expertise</a>
@@ -239,12 +237,7 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
             <div className="col-span-1 md:col-span-2">
-              <div className="flex items-center gap-2 font-display font-bold text-2xl tracking-tighter mb-6">
-                <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground">
-                  <Zap className="w-4 h-4" />
-                </div>
-                <span>Venture <span className="text-primary">Engine</span></span>
-              </div>
+              <Logo size="sm" className="mb-6" />
               <p className="text-muted-foreground max-w-sm">
                 We engineer tomorrow's giants. The operational backbone for venture building.
               </p>
