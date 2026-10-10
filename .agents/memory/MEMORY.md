@@ -1,0 +1,1 @@
+- [Portable npm lockfiles](portable-npm-lockfiles.md) — package installs can write internal registry URLs; keep lockfiles usable outside Replit.
